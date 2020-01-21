@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 /*****************************************************************************
  * Author:      Baturay Kayaturk
  * Description: This is the first Selenium TestNG test.
- *              It opens swtestacademy homepage and prints and checks its title.
+ *              It opens https://www.python.org homepage and prints and checks its title.
  *******************************************************************************/
 
 public class FirstTest {
@@ -18,7 +18,7 @@ public class FirstTest {
     public WebDriver driver;
 
     //Declare a test URL variable
-    public String testURL = "http://www.swtestacademy.com/";
+    public String testURL = "https://www.python.org";
 
     //-----------------------------------Test Setup-----------------------------------
     @BeforeMethod
@@ -26,7 +26,7 @@ public class FirstTest {
         //Create a new ChromeDriver
         driver = new ChromeDriver();
 
-        //Go to www.swtestacademy.com
+        //Go to https://www.python.org
         driver.navigate().to(testURL);
     }
 
@@ -40,7 +40,7 @@ public class FirstTest {
         System.out.println("Page Title: " + title);
 
         //Assertion
-        Assert.assertEquals(title, "Software Test Academy", "Title assertion is failed!");
+        Assert.assertEquals(title, "Welcome to Python.org", "Title assertion is failed!");
     }
 
     //-----------------------------------Test TearDown-----------------------------------
